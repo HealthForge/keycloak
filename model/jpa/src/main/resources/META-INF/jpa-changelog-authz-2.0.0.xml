@@ -162,5 +162,16 @@
         <addPrimaryKey columnNames="POLICY_ID,ASSOCIATED_POLICY_ID" constraintName="CONSTRAINT_FARSRPAP" tableName="ASSOCIATED_POLICY"/>
         <addForeignKeyConstraint baseColumnNames="POLICY_ID" baseTableName="ASSOCIATED_POLICY" constraintName="FK_FRSRPAS14XCX4WNKOG82SSRFY" referencedColumnNames="ID" referencedTableName="RESOURCE_SERVER_POLICY"/>
         <addForeignKeyConstraint baseColumnNames="ASSOCIATED_POLICY_ID" baseTableName="ASSOCIATED_POLICY" constraintName="FK_FRSR5S213XCX4WNKOG82SSRFY" referencedColumnNames="ID" referencedTableName="RESOURCE_SERVER_POLICY"/>
+
+        <modifyDataType
+                columnName="VALUE"
+                newDataType="VARCHAR(4096)"
+                tableName="USER_ATTRIBUTE"/>
+
+        <modifyDataType
+                columnName="VALUE"
+                newDataType="VARCHAR(4096)"
+                tableName="CLIENT_ATTRIBUTES"/>
+
     </changeSet>
 </databaseChangeLog>
